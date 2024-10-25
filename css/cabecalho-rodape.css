@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    /* font-family: "Playwrite GB S", cursive; */
+    /* font-family: "Jura", sans-serif; */
+}
+
+/*! Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    background-color: #070d12;
+}
+
+.logo{
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 140px; 
+}
+
+.nav ul {
+    list-style: none;
+    display: flex; /* Alinha o menu na horizontal */
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 8px 40px;
+    border-radius: 20px;
+    gap: 14px;
+    margin: 0 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    background: #070d12; 
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #ffffffbd;
+    font-size: 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-family: "Playwrite GB S", cursive;
+}
+
+.botao-mode{
+    width: 140px;
+}
+
+.nav ul li a:hover {
+    color: #E7E7E3;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.671);
+}
+
+
+/*! Botão "Dark Mode" */
+.btn {
+    font-size: 1em;
+    cursor: pointer;
+    background-color: rgba(0,0,0,.80);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+
+/*! Rodapé */
+footer{
+    border: 6px solid #34313430;
+    box-shadow: 0 0 30px #0000002a;
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding:  10px 10px ;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 5px 0;
+}
+.socialIcons a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 26px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    transition: 0.3s;
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.socialIcons a i{
+    color: black;
+    opacity: 0,9;
+}
+
+/* icones das redes sociais */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 10px 0;
+    padding: 5px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    margin: 10px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+    color: #ccc;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+    color: #E0FFC0;
+}
+.footerBottom{
+    background-color: #000;
+    text-align: center;
+}
+.footerBottom p{
+    color: #ffffffcf;
+    font-size: 22px;
+    padding: 10px 0;
+    word-spacing: 6px;
+    font-weight: 500;
+}
+.designer{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+    color: #ffffffcf;
+}
+  
+ 
+
+/*! Responsividade */
+@media (max-width: 768px) {
+.header {
+    flex-direction: column; 
+    text-align: center;
+}
+
+.botao-mode {
+    margin-top: 10px;
+}
+
+.nav ul {
+    flex-direction: column; 
+    padding: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+
+.nav ul li {
+    margin: 10px 0; 
+}
+}
+
+
+
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+  }  
+
+
+@media(max-width: 426px){
+    .nav a{
+        font-size: 11px;
+        font-weight: 600;
+    }
+
+}
+
+@media(max-width: 336px){
+    .nav a{
+        font-size: 10px;
+    }
+}

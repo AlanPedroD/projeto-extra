@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    transition: .3s ease;
+}
+  
+body {
+    background-color: #f5f5f5;
+}
+/*!Seção Banner Principal*/
+.banner {
+    background-image: url('../image/banner-11.png');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    transition: 0.5s ease;
+    position: relative;
+}
+
+.seta {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem; /* Aumentando o tamanho da seta */
+    color: #ffeb3b; /* Cor amarela clara */
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+
+.titulo-e-botao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    color: #ffffffaf;
+}
+
+.button {
+    max-width: 300px;
+    padding: 15px 30px;
+    background-color: rgba(0,0,0,.60);
+    color: #f5f5f5;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button:hover{
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
+}
+
+
+/*! Seção de cursos */
+.cursos {
+    padding: 20px;
+    text-align: center;
+    background: url(../image/galaxia-noturna-paint.jpg);
+}
+
+.cursos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #f5f5f5;
+}
+
+.cards-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px; 
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #021017;
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+    padding: 15px; 
+    width: calc(33.33% - 20px); /* Largura do card em relação ao contêiner */
+    width: 31%;
+    transition: transform 0.3s; /* Transição para efeitos de hover */
+}
+
+.card:hover {
+    cursor: default;
+    transform: scale(0.95);
+}
+
+.div-logo-cursos img {
+    width: 100px; 
+    height: 50px; 
+    object-fit: contain; 
+}
+
+.div-logo-cursos{
+    border-radius: 10px;
+}
+
+
+h3 {
+    margin: 10px 0; 
+    font-size: 1.5em; 
+}
+
+p {
+    font-size: 1em; 
+    color: #555; 
+}
+
+.card h3{
+    color: #2BDEFD;
+}
+
+.card p{
+    margin-bottom: 10px;
+    color: #f5f5f5;
+}
+
+.card a {
+    max-width: 140px;
+    text-align: center;
+    display: inline-block;
+    align-self: center;
+    margin-top: auto;
+    padding: 8px 30px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid #fff;
+    color: #f5f5f5;
+    background-color: rgba(0,0,0,.30);
+}
+
+
+/*! Seção de blog */
+.blog {
+    background-color: #f5f5f5;
+    padding: 20px;
+    max-width: 1440px;
+    margin: 20px auto;
+}
+
+.blog h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.blog-posts {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.post {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 31%; /* Largura igual o iframe */
+    height: auto; /* Altura automática para se ajustar ao conteúdo */
+}
+
+.post a{
+    color: #1a1a1ad5;
+    font-weight: 600;
+}
+
+/*! Seção vídeos */
+.videos {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1440px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.videos iframe {
+    width: 31%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/*! Seção de perguntas frequentes */
+.faq {
+    background-color: #ffffff;
+    padding: 50px;
+    text-align: center;
+}
+.faq h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+.faq-item {
+    margin-bottom: 20px;
+}
+.faq-item h3 {
+    font-size: 1.5rem;
+}
+
+
+/*! Responsividade */
+@media(max-width: 768px){
+    .banner{
+        justify-content: flex-start;
+        height: 370px;
+    }
+    .banner h1{
+        font-size: 2rem;
+        margin-top: 40px;
+    }
+    .cursos h2{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 16px;
+    }
+    .videos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .videos iframe {
+        width: 100%;
+        max-width: 560px; /* largura máxima em dispositivos móveis */
+    }
+}
+
+
+@media(max-width: 680px){
+    .cards-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .blog-posts{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .post{
+        width: 80%;
+        min-height: 200px;
+    }
+}
+
+@media(max-width: 426px){
+    .post{
+        width: 100%;
+    }
+
+}
+
