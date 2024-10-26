@@ -1,4 +1,4 @@
-let botao = document.querySelector('button');
+let botao = document.querySelector('.botao-dark');
 
 botao.addEventListener('click', function(){
     if(botao.textContent === 'Dark'){
