@@ -1,0 +1,102 @@
+* {
+	box-sizing: border-box; 
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", sans-serif;
+	height: 100vh;
+	width: 100%;
+	background: url("/image/galaxia-noturna-paint.jpg");
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.area {
+	width: 400px;
+	height: auto;
+	color: #fff;
+	padding: 50px 30px;
+	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+	position: relative;
+	background: black;
+	border: 2px solid #625e5e30;
+	box-shadow: 0 0 30px #faf6f62a;
+	border-radius: 25px;
+}
+.area p {
+	margin: 0;
+	padding: 0;
+	font-weight: 300;
+	text-align: center;
+}
+.form-area {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+}
+.box {
+  margin: 10px;
+	position: relative;
+}
+.box input {
+	padding-right: 30px;
+}
+.box i {
+	position: absolute;
+	top: 34%;
+	transform: translateY(-50%);
+	right: 30px;
+	color: #fff;
+}
+.area input, button {
+	border: none;
+	border: 1px solid #bababa;
+	background: transparent;
+	outline: none;
+	height: 50px;
+	color: #ffffff;
+	font-size: 16px;
+	width: 100%;
+	margin-bottom: 40px;
+	padding: 20px;
+	border-radius: 50px;
+}
+.area a {
+	text-decoration: none;
+	color: #6c6969;
+}
+.area button {
+  padding: 10px;
+	background: #fff;
+	color: #000000;
+}
+.terms input[type="checkbox"] {
+  margin: 4px;
+	width: 15px;
+	height: auto;
+}
+.button-login{
+	position: relative;
+	display: inline-block;
+	padding: 15px 20px;
+	margin: 30px 0;
+	color:#ff9900;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	transition: 0.4s;
+	letter-spacing: 4px;
+	overflow: hidden;
+	margin-right: 50px;
+	border: 2px solid #ff9900;
+	border-radius:50px;
+}
+.button-login:hover{
+	background: #cbc1c7;
+	color: #000;
+	box-shadow: 0 0 10px rgb(180, 58, 10), 0 0 40px #a97b24, 0 0 70px #e7ae06;
+}
+.button-login:active{
+	 color:#d7d2d2; 
+	 background: #000000;
+}

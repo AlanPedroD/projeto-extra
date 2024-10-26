@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="../css/cabecalho-rodape.css">
+    <link rel="stylesheet" href="/css/registro.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Fonte-01-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
+        rel="stylesheet">
     <!-- font-02 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!--! Cabeçalho -->
     <header class="header">
@@ -24,18 +28,47 @@
             </a>
         </div>
         <nav class="nav">
-          <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="quizzes.html">Quizzes</a></li>
-            <li><a href="cursos.html">Cursos</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="login.html">Login</a></li>
-          </ul>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="quizzes.html">Quizzes</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
         </nav>
         <div class="botao-mode">
             <button class="btn">Dark</button>
         </div>
     </header>
+
+    <!--formulario -->
+    <div class="form-area">
+        <div class="area">
+
+            <form>
+                <div class="box">
+                    <input type="text" placeholder="Email">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="box">
+                    <input type="text" placeholder="Nome">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="box">
+                    <input type="password" placeholder="Senha">
+                    <i class="fa fa-lock"></i>
+                </div>
+                <div class="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Eu aceito os <a href="#">termos de uso</a> e a <a href="#">política de
+                            privacidade</a></label>
+                </div>
+                <button class="button-login" type="submit">Cadastre-se</button>
+            </form>
+        </div>
+    </div>
+    <!--formulario -->
+
     <!--! Rodapé -->
     <footer>
         <div class="footerContainer">
@@ -62,4 +95,5 @@
     </footer>
     <script src="../js/script.js"></script>
 </body>
+
 </html>
