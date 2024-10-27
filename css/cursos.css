@@ -228,19 +228,19 @@ p {
 
 
 /*! Seção de perguntas frequentes */
-.faq {
+.container-perguntas {
     background-color: #ffffff;
     padding: 50px;
     text-align: center;
 }
-.faq h2 {
+.container-perguntas h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
 }
-.faq-item {
+.pergunta-item {
     margin-bottom: 20px;
 }
-.faq-item h3 {
+.pergunta-item h3 {
     font-size: 1.5rem;
 }
 
