@@ -38,7 +38,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     font-size: 4rem; /* Aumentando o tamanho da seta */
-    color: #ffeb3b; /* Cor amarela clara */
+    color: #ffeb3b;
     cursor: pointer;
     animation: bounce 2s infinite;
 }
@@ -183,27 +183,6 @@ body {
 }
 
 
-@media (max-width: 992px) {
-    .container-cursos {
-        /* grid-template-columns: repeat(2, 1fr); */
-        grid-template-columns: repeat(2, minmax(360px, 1fr));
-    }
-}
-
-@media(max-width: 768px){
-    .container-cursos{
-        grid-template-columns: repeat(2, minmax(300px, 1fr));
-    }
-}
-
-
-@media (max-width: 648px) {
-    .container-cursos {
-        grid-template-columns: minmax(300px, 1fr);
-    }
-}
-
-
 /*! Seção de blog */
 .blog {
     background-color: #f5f5f5;
@@ -275,7 +254,18 @@ body {
 
 
 /*! Responsividade */
+
+@media (max-width: 992px) {
+    .container-cursos {
+        /* grid-template-columns: repeat(2, 1fr); */
+        grid-template-columns: repeat(2, minmax(360px, 1fr));
+    }
+}
+
 @media(max-width: 768px){
+    .container-cursos{
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
     .banner{
         justify-content: flex-start;
         height: 370px;
@@ -303,16 +293,6 @@ body {
 
 
 @media(max-width: 680px){
-    .cards-container{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .card{
-        width: 100%;
-    }
-
     .blog-posts{
         flex-direction: column;
         justify-content: center;
@@ -330,4 +310,10 @@ body {
         width: 100%;
     }
 
+}
+
+@media (max-width: 648px) {
+    .container-cursos {
+        grid-template-columns: minmax(300px, 1fr);
+    }
 }
