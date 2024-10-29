@@ -1,5 +1,5 @@
 body{
-  background: url(/image/galaxia-noturna-paint.jpg);
+  background: url(../image/galaxia-noturna.jpg);
   background-size: cover;
 }
 /*sobre nos */
@@ -92,6 +92,7 @@ p{
   text-transform: capitalize;
   transition: all 0.3s ease;
 }
+
 
 .wrapper .team .team_member .btn_grp a:first-child:hover {
   background: #0c1e37;

@@ -1,0 +1,575 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../image/galaxia-noturna.jpg);
+    color: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.container,
+h1 {
+    color: antiquewhite;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#quiz-container {
+    color: blanchedalmond;
+    margin-bottom: 20px;
+}
+
+#question {
+    color: #f9f9f9;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#choices button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #4A5C6A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#choices button:hover {
+    background: #4A5C6A;
+    color: #ffffff;
+    box-shadow: 0 0 10px #4A5C6A, 0 0 40px #4A5C6A, 0 0 70px #4A5C6A;
+}
+
+#choices:active {
+    color: #4A5C6A;
+    background: #000000;
+}
+
+#end-quiz-options button {
+    position: relative;
+    display: inline-block;
+    padding: 15px 20px;
+    margin: 40px 0;
+    color: #4A5C6A;
+    font-family: 'open_sansbold';
+    text-decoration: none;
+    transition: 0.4s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 10px;
+    border: 2px solid #4A5C6A;
+    border-radius: 50px;
+    margin-left: 5%;
+}
+
+#end-quiz-options button:hover {
+    background: #4A5C6A;
+    color: #ffffff;
+    box-shadow: 0 0 10px #4A5C6A, 0 0 40px #4A5C6A, 0 0 70px #4A5C6A;
+}
+
+#end-quiz-options button:active {
+    color: #4A5C6A;
+    background: #000000;
+}
+
+
+#feedback {
+    color: ghostwhite;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+#scoreboard {
+    color: #f9f9f9;
+    margin-top: 30px;
+}
+
+#ranking {
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* nav {
+    margin-left: 35%;
+    max-width: 400px;
+    margin-top: 30px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.20);
+    border: 2px solid rgba(255, 255, 255, 0.10);
+} */
+
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 15px 20px;
+    margin: 40px 0;
+    color: #4A5C6A;
+    font-family: 'open_sansbold';
+    text-decoration: none;
+    transition: 0.4s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+    border: 2px solid #4A5C6A;
+    border-radius: 50px;
+    margin-left: 20%;
+}
+
+.button:hover {
+    background: #4A5C6A;
+    color: #000;
+    box-shadow: 0 0 10px #4A5C6A, 0 0 40px #4A5C6A, 0 0 70px #4A5C6A;
+}
+
+.button:active {
+    color: #4A5C6A;
+    background: #000000;
+}
+
+#next-btn {
+    display: none;
+    /* Como já está no JavaScript */
+    margin: 20px auto;
+    display: block;
+    /* Garante que o botão seja um elemento de bloco */
+    text-align: center;
+}
+
+#quiz-container {
+    align-items: center;
+    margin-left: 40%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+}
+
+.end-quiz-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.quizzes h1 {
+    padding: 3%;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.quizzes h1 span {
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 6px 14px;
+    display: inline-block;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin: 10px 0;
+    text-align: left;
+    margin-left: 4%;
+}
+
+h3 {
+    margin: 10px 0;
+    text-align: center;
+    margin-left: 4%;
+}
+
+#ranking,
+.list {
+    list-style-type: none;
+    /* Remove os marcadores padrão */
+    padding-left: 0;
+    /* Remove o espaçamento lateral */
+    text-align: center;
+    /* Centraliza o texto */
+    margin-top: 20px;
+}
+
+#ranking li {
+    max-width: 200px;
+    margin-right: 40%;
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    /* Reduz o padding para diminuir o tamanho */
+    background-color: #4A5C6A;
+    color: white;
+    border-radius: 5px;
+    cursor: default;
+    /* Cursor padrão, já que não é clicável */
+    /* Removido o efeito neon */
+    box-shadow: none;
+    font-size: 0.9em;
+    /* Diminui o tamanho da fonte */
+}
+
+#ranking li:hover {
+    background-color: #4A5C6A;
+    /* Mantém a cor ao passar o mouse */
+}
+
+#scoreboard {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#quiz-container {
+    max-width: 600px;
+    /* Para dar espaço ao ranking */
+    margin: 0 auto;
+}
+
+#next-btn,
+#feedback {
+    margin-top: 20px;
+}
+
+/* Estiliza as mensagens de correto/errado */
+#feedback {
+    color: lime;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+    color: #f9f9f9;
+}
+
+.ranking-container {
+    color: #f9f9f9;
+}
+
+.login-lebel {
+    display: flex;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    margin-left: 43%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.login-input {
+    display: flex;
+    width: 30%;
+    padding: 5px;
+    background-color: #4A5C6A;
+    color: #ffffff;
+    border-radius: 50px;
+}
+
+.button-login {
+    position: relative;
+    display: inline-block;
+    padding: 10px 24px;
+    margin: 30px 0;
+    color: #4A5C6A;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.4s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+    border: 2px solid #3c4042;
+    border-radius: 50px;
+}
+
+.button-login:hover {
+    background: #cbc1c7;
+    color: #000;
+    box-shadow: 0 0 10px rgb(114, 116, 182), 0 0 40px #0a127c, 0 0 70px #020104;
+}
+
+.button-login:active {
+    color: #4A5C6A;
+    background: #000000;
+}
+
+.h2-index {
+    margin-left: 35%;
+    margin-top: 50px;
+}
+
+.h2-ranking-index {
+    margin-left: 40%;
+    margin-top: 50px;
+}
+
+.list li {
+    max-width: 200px;
+    margin-right: 40%;
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    /* Reduz o padding para diminuir o tamanho */
+    background-color: #4A5C6A;
+    color: white;
+    border-radius: 5px;
+    cursor: default;
+    /* Cursor padrão, já que não é clicável */
+    /* Removido o efeito neon */
+    box-shadow: none;
+    font-size: 0.9em;
+    /* Diminui o tamanho da fonte */
+}
+
+.list {
+    list-style-type: none;
+    /* Remove os marcadores padrão */
+    padding-left: 0;
+    /* Remove o espaçamento lateral */
+    text-align: center;
+    /* Centraliza o texto */
+    margin-top: 40px;
+    margin-left: 43%;
+}
+
+.quiz-container {
+    display: grid;
+    grid-gap: 16px;
+    margin: 30px;
+}
+
+p {
+    text-align: center;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.h2-cadastro {
+    margin-left: 41%;
+}
+
+
+/*#intro-text {
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: pre-wrap;
+    /* Preserve quebras de linha 
+    border-right: 2px solid;
+    animation: blinkCursor 0.7s steps(44) infinite normal;*/
+
+@keyframes blinkCursor {
+    from {
+        border-right-color: rgba(0, 0, 0, 0.75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.img-quiz-index {
+    border-radius: 30px;
+}
+
+/*intro*/
+.banner-image {
+    position: relative;
+    height: 400px;
+    overflow: auto;
+}
+
+.container-m {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #d6dcde;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.container-m h1 {
+    font-size: 30px;
+}
+
+.container-m h1 span {
+    border: 5px solid white;
+    padding: 6px 14px;
+    display: inline-block;
+}
+
+.cen {
+    margin: 20px;
+    display: block;
+    font-size: 20px;
+}
+
+.button-inicio {
+    position: relative;
+    display: inline-block;
+    padding: 10px 24px;
+    color: #d8e0e3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.4s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 0px;
+    border: 2px solid #3c4042;
+    border-radius: 50px;
+}
+
+.button-inicio:hover {
+    background: #cbc1c7;
+    color: #000;
+    box-shadow: 0 0 10px rgb(3, 31, 189), 0 0 40px #0a127c, 0 0 70px #34117b;
+}
+
+.button-inicio:active {
+    color: #4A5C6A;
+    background: #000000;
+}
+
+/*fim-intro*/
+
+/*cards*/
+.wrapper {
+    padding: 10px 10%;
+}
+
+.wrapper h2 {
+    margin: 30px;
+    color: #e8e9eb;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin-left: 30%;
+    font-weight: 600;
+}
+
+#card-area {
+    padding: 50px 0;
+}
+
+.box-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+}
+
+.box {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.box img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.overlay {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(transparent, #7f8194 100%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.overlay h3 {
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 80%;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: #e2e8ef;
+}
+
+.overlay a {
+    margin-top: 10px;
+    color: #e2e8ef;
+    text-decoration: none;
+    font-size: 14px;
+    background: #000000;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+.box:hover img {
+    transform: scale(1.1);
+}
+
+.box:hover .overlay {
+    height: 100%;
+}
+
+/*fim-cards*/
+
+/*seçao */
+.about {
+    margin: 20px;
+    padding: 40px 10%;
+    text-align: center;
+    background-color: #96a4aa;
+    margin-bottom: 20px;
+    font-weight: 700;
+    border: 2px solid #c3c0c3db;
+    box-shadow: 0 0 30px #c7c4c4f1;
+}
+
+.about p {
+    color: #0a1335;
+}
+
+.title {
+    color: #d6dcde;
+    margin: 20px;
+}
+
