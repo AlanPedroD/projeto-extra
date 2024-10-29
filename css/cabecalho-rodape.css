@@ -79,6 +79,11 @@
     padding: 0;
 }
 
+#botao-dark.light-mode{
+    background-color: #fff;
+    color: #000;
+}
+
 
 /*! Rodapé */
 footer{
