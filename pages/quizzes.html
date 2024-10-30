@@ -40,27 +40,27 @@
 
     <!--! Sessão Quizzes -->
 
-    <div class="container"></div>
-    <h1>Quiz de Tecnologia</h1>
-    <div id="quiz-container">
-        <div id="question">Carregando pergunta...</div>
-        <div class="choices" id="choices">
-            <!-- Opções serão geradas dinamicamente -->
+    <div class="container">
+        <h1>Quiz de Tecnologia</h1>
+        <div id="quiz-container">
+            <div id="question">Carregando pergunta...</div>
+            <div class="choices" id="choices">
+                <!-- Opções serão geradas dinamicamente -->
+            </div>
+            <div id="feedback"></div>
         </div>
-        <div id="feedback"></div>
+        <button class="button" id="next-btn" onclick="nextQuestion()">Próxima pergunta</button>
+        <div id="scoreboard">
+            <h2>Ranking</h2>
+            <ol id="ranking">
+                <!-- Ranking será atualizado aqui -->
+            </ol>
+        </div>
+        <div id="end-quiz-options" style="display:none;">
+            <button id="repeat-btn" onclick="restartQuiz()">Repetir Quiz</button>
+            <button id="home-btn" onclick="goToHomePage()">Página Inicial</button>
+        </div>
     </div>
-    <button class="button" id="next-btn" onclick="nextQuestion()">Próxima pergunta</button>
-    <div id="scoreboard">
-        <h2>Ranking</h2>
-        <ol id="ranking">
-            <!-- Ranking será atualizado aqui -->
-        </ol>
-    </div>
-    <div id="end-quiz-options" style="display:none;">
-        <button id="repeat-btn" onclick="restartQuiz()">Repetir Quiz</button>
-        <button id="home-btn" onclick="goToHomePage()">Página Inicial</button>
-    </div>
-</div>
 
 
 
