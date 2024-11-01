@@ -5,16 +5,17 @@
     box-sizing: border-box;
 }
 
+html, body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     background-image: url(../image/galaxia-noturna.jpg);
     color: #ffffff;
-    height: 100%;
     font-family: Arial, sans-serif;
     text-align: center;
-}
-
-html{
-    height: 100%;
 }
 
 .container{
