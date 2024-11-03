@@ -15,6 +15,8 @@
     align-items: center;
     padding: 5px;
     background-color: #070d12;
+    /* background-color: #1A1A40;
+    background-color: #F4F4F4; */
 }
 
 .logo{
@@ -40,6 +42,11 @@
     margin: 0 10px;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
     background: #070d12; 
+    /* background-color: #1A1A40;
+    background-color: #BDB76B;
+    background-color: #8B4513;
+    background-color: #666666;
+    background-color: #2A9D8F; */
 }
 
 .nav ul li a {
@@ -82,6 +89,7 @@
 #botao-dark.light-mode{
     background-color: #fff;
     color: #000;
+    border: 1px solid #ccc;
 }
 
 

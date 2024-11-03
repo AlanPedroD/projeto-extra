@@ -170,14 +170,16 @@ body {
 
 .botao {
     padding: 9px 16px;
-    background-color: #2BFDBE;
-    color: #000;
+    /* background-color: #2bfdbece; */
+    background-color: #00d1b2;
+    color: #000000e0;
     text-decoration: none;
     border-radius: 5px;
     margin-top: auto;
     width: 80%;
-    font-weight: 600;
+    font-weight: bolder;
     font-size: 14px;
+    text-align: center;
 }
 
 
