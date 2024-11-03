@@ -18,6 +18,10 @@
     /* background-color: #1A1A40;
     background-color: #F4F4F4; */
 }
+.header.light-mode{
+    background-color: #00d1b2;
+    background-color: #FF9831;
+}
 
 .logo{
     width: 140px;
@@ -42,11 +46,9 @@
     margin: 0 10px;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
     background: #070d12; 
-    /* background-color: #1A1A40;
-    background-color: #BDB76B;
-    background-color: #8B4513;
-    background-color: #666666;
-    background-color: #2A9D8F; */
+}
+.nav ul.light-mode{
+    background-color: #FF9D5C;
 }
 
 .nav ul li a {
@@ -58,6 +60,10 @@
     border: 1px solid transparent;
     font-weight: 500;
     font-family: "Playwrite GB S", cursive;
+    transition: 0.3s ease;
+}
+.nav ul.light-mode a{
+    color: #000;
 }
 
 .botao-mode{
@@ -87,7 +93,8 @@
 }
 
 #botao-dark.light-mode{
-    background-color: #fff;
+    /* background-color: #FF9D5C; */
+    background-color: #E7E7E3;
     color: #000;
     border: 1px solid #ccc;
 }

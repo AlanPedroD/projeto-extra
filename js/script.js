@@ -9,3 +9,12 @@ botao.addEventListener('click', function() {
         botao.textContent = 'Dark';
     }
 });
+
+let botaoExplorar = document.querySelector('.button');
+let secaoCursos = document.querySelector('.cursos');
+
+botaoExplorar.addEventListener('click', function(){
+    secaoCursos.scrollIntoView({
+        behavior: 'smooth'
+    })
+})
