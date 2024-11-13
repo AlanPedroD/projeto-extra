@@ -40,8 +40,6 @@ body {
 	margin-bottom: 40px;
 }
 
-
-
 .box label {
     position: absolute;
     top: 0px; /* Ajuste para o canto superior do input */
@@ -55,16 +53,10 @@ body {
 	display: none;
 }
 
-
-
-
-
-
 .box input {
   	padding-right: 30px;
 	margin-top: 2px;
 }
-
 
 .box input.error {
 	border: solid 2px #992020;
@@ -78,19 +70,18 @@ body {
 	color: #206620;
 }
 
-
 .helper-text {
-	/* display: none; */
 	font-size: .8rem;
 	color: darkred;
-	display: block;
-
-
-	margin-top: 5px; /* Pequeno espaçamento abaixo do input */
-    margin-left: 5px; /* Alinhamento à esquerda */
-    position: relative;
+	left: 15px;
+	position: absolute;
+	letter-spacing: 1.1px;
+	display: none;
 }
 
+.helper-text.visible{
+	display: block;
+}
 
 .box i {
 	position: absolute;
@@ -112,6 +103,11 @@ body {
 	padding: 20px;
 	border-radius: 50px;
 }
+
+input{
+	margin-bottom: 2px;
+}
+
 .area a {
 	text-decoration: none;
 	color: #6c6969;
