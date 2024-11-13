@@ -47,16 +47,22 @@
 
             <form>
                 <div class="box">
-                    <input type="text" placeholder="Email">
+                    <label for="email">*Campo obrigatório</label>
+                    <input type="email" placeholder="Email" id="email">
                     <i class="fa fa-user"></i>
+                    <p class="helper-text">Mensagem de ajuda</p>
                 </div>
                 <div class="box">
-                    <input type="text" placeholder="Nome">
+                    <label for="nome">*Campo obrigatório</label>
+                    <input type="text" placeholder="Nome" id="nome">
                     <i class="fa fa-user"></i>
+                    <p class="helper-text">Mensagem de ajuda</p>
                 </div>
                 <div class="box">
-                    <input type="password" placeholder="Senha">
+                    <label for="senha">*Campo obrigatório</label>
+                    <input type="password" placeholder="Senha" id="senha">
                     <i class="fa fa-lock"></i>
+                    <p class="helper-text">Mensagem de ajuda</p>
                 </div>
                 <div class="terms">
                     <input type="checkbox" id="terms" name="terms" required>
@@ -94,6 +100,7 @@
             </div>
     </footer>
     <script src="../js/script.js"></script>
+    <script src="../js/registro.js"></script>
 </body>
 
 </html>

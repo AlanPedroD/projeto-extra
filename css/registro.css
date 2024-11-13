@@ -35,12 +35,63 @@ body {
 	height: 100vh;
 }
 .box {
-  margin: 10px;
+	margin: 10px;
 	position: relative;
+	margin-bottom: 40px;
 }
+
+
+
+.box label {
+    position: absolute;
+    top: 0px; /* Ajuste para o canto superior do input */
+    right: 10px; /* Alinha no lado direito */
+    color: #ffffffbd;
+    font-size: 10px;
+    background-color: black; /* Fundo para destacar o texto */
+    padding: 0 15px;
+    border-radius: 3px;
+    transform: translateY(-100%); /* Coloca a label acima do input */
+	display: none;
+}
+
+
+
+
+
+
 .box input {
-	padding-right: 30px;
+  	padding-right: 30px;
+	margin-top: 2px;
 }
+
+
+.box input.error {
+	border: solid 2px #992020;
+	background-color: #CCBBBB;
+	color: #662020;
+}
+  
+.box input.correct {
+	background-color: #BBCCBB;
+	border: solid 2px #206620;
+	color: #206620;
+}
+
+
+.helper-text {
+	/* display: none; */
+	font-size: .8rem;
+	color: darkred;
+	display: block;
+
+
+	margin-top: 5px; /* Pequeno espaçamento abaixo do input */
+    margin-left: 5px; /* Alinhamento à esquerda */
+    position: relative;
+}
+
+
 .box i {
 	position: absolute;
 	top: 34%;
@@ -57,7 +108,7 @@ body {
 	color: #ffffff;
 	font-size: 16px;
 	width: 100%;
-	margin-bottom: 40px;
+	/* margin-bottom: 40px; */
 	padding: 20px;
 	border-radius: 50px;
 }
