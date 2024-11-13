@@ -142,14 +142,16 @@ body{
   margin: 20px;
 	padding: 40px 10%;
 	text-align: center;
-  background-color: #96a4aa;
+  background-color: #01060e;
   margin-bottom: 20px;
   font-weight: 700;
-  border: 2px solid #c3c0c3db;
-	box-shadow: 0 0 30px #c7c4c4f1;
+  border: 2px solid #01060e;
+  border-radius: 20px;
+	box-shadow: 0 0 30px #6e7887f1;
 }
 .about p{
-  color: #0a1335;
+  color: #dbdde6;
+  font-size: 1.5rem;
 }
 .title{
   color: #d6dcde;
