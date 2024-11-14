@@ -144,7 +144,7 @@ function restartQuiz() {
 }
 
 function goToHomePage() {
-  window.location.href = "/index.html"; // Troque para o URL da página inicial
+  window.location.href = "index.html"; // Troque para o URL da página inicial
 }
 
 document.addEventListener("DOMContentLoaded", () => {
