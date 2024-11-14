@@ -79,3 +79,46 @@ inputSenha.addEventListener('input', function(e) {
         showHelperText(senhaHelper, "A senha precisa ter 6 ou mais caracteres");
     }
 });
+
+
+// Função para salvar os dados no localStorage e mostrar o alerta
+function salvarCadastro() {
+    // Verificar se os campos são válidos
+    if (inputNome.classList.contains('correct') &&
+        inputEmail.classList.contains('correct') &&
+        inputSenha.classList.contains('correct')) {
+        
+        // Salva os dados no localStorage
+        localStorage.setItem('nome', inputNome.value);
+        localStorage.setItem('email', inputEmail.value);
+        localStorage.setItem('senha', inputSenha.value);
+
+        // Exibe alerta de sucesso
+        alert("Cadastro realizado com sucesso!");
+
+        // Limpa os campos do formulário
+        limparFormulario();
+    } else {
+        // Exibe alerta de erro se os dados forem inválidos
+        alert("Erro: Preencha todos os campos corretamente antes de cadastrar.");
+    }
+}
+
+// Função para limpar o formulário
+function limparFormulario() {
+    inputNome.value = '';
+    inputEmail.value = '';
+    inputSenha.value = '';
+
+    // Remove classes de validação
+    inputNome.classList.remove('correct', 'error');
+    inputEmail.classList.remove('correct', 'error');
+    inputSenha.classList.remove('correct', 'error');
+}
+
+// Adicionar evento ao botão de cadastro
+let botaoCadastro = document.querySelector('.button-login');
+botaoCadastro.addEventListener('click', function(event) {
+    event.preventDefault(); // Evita o envio do formulário
+    salvarCadastro(); // Chama a função para salvar, exibir o alerta e limpar o formulário
+});

@@ -1,62 +1,52 @@
-// JavaScript
-let inputEmail = document.querySelector('#email');
-let emailHelper = document.querySelector('#email-helper');
-let labelEmail = document.querySelector('label[for="email"]');
 
-let inputSenha = document.querySelector('#senha');
-let senhaHelper = document.querySelector('#senha-helper');
-let labelSenha = document.querySelector('label[for="senha"]');
+// Seleciona os campos do formulário de login
+const inputEmail = document.querySelector('#email');
+const inputSenha = document.querySelector('#senha');
+const emailHelper = document.querySelector('#email-helper');
+const senhaHelper = document.querySelector('#senha-helper');
 
-function mostrarPopup(input, label){
-    input.addEventListener('focus', function(){
-      label.style.display = 'block';
-    })
-  
-    input.addEventListener('blur', function(){
-        label.style.display = 'none';
-    })
-}
+// Botão de login
+const loginButton = document.querySelector('.button-login');
 
-mostrarPopup(inputEmail, labelEmail);
-mostrarPopup(inputSenha, labelSenha);
-
-// Funções para mostrar e ocultar as mensagens de ajuda
+// Função para mostrar mensagem de ajuda
 function showHelperText(helper, message) {
     helper.innerText = message;
     helper.classList.add('visible');
 }
 
+// Função para ocultar mensagem de ajuda
 function hideHelperText(helper) {
     helper.classList.remove('visible');
 }
 
+// Evento de clique no botão de login
+loginButton.addEventListener('click', function(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
 
-// Validação do Email
-inputEmail.addEventListener('input', function(e) {
-    let valorEmail = e.target.value;
+    // Obtém os dados salvos no localStorage
+    const savedEmail = localStorage.getItem('email');
+    const savedSenha = localStorage.getItem('senha');
 
-    if (valorEmail.includes('@') && valorEmail.endsWith('.com')) {
-        inputEmail.classList.add('correct');
-        inputEmail.classList.remove('error');
-        hideHelperText(emailHelper);
+    // Verifica se o email e senha digitados correspondem aos dados salvos
+    if (inputEmail.value === savedEmail && inputSenha.value === savedSenha) {
+        alert("Login realizado com sucesso!");
+        // Redireciona para outra página, se necessário
+        // window.location.href = "pagina-principal.html";
     } else {
-        inputEmail.classList.add('error');
-        inputEmail.classList.remove('correct');
-        showHelperText(emailHelper, "O email precisa ter um '@' e terminar com '.com'");
-    }
-});
+        if (inputEmail.value !== savedEmail) {
+            showHelperText(emailHelper, "Email não cadastrado");
+            inputEmail.classList.add('error');
+        } else {
+            hideHelperText(emailHelper);
+            inputEmail.classList.remove('error');
+        }
 
-// Validação da Senha
-inputSenha.addEventListener('input', function(e) {
-    let valorSenha = e.target.value;
-
-    if (valorSenha.length >= 6) {
-        inputSenha.classList.add('correct');
-        inputSenha.classList.remove('error');
-        hideHelperText(senhaHelper);
-    } else {
-        inputSenha.classList.add('error');
-        inputSenha.classList.remove('correct');
-        showHelperText(senhaHelper, "A senha precisa ter 6 ou mais caracteres");
+        if (inputSenha.value !== savedSenha) {
+            showHelperText(senhaHelper, "Senha incorreta");
+            inputSenha.classList.add('error');
+        } else {
+            hideHelperText(senhaHelper);
+            inputSenha.classList.remove('error');
+        }
     }
 });
