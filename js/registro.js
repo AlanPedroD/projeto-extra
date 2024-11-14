@@ -98,6 +98,9 @@ function salvarCadastro() {
 
         // Limpa os campos do formulário
         limparFormulario();
+        
+        // Redireciona para a página de login
+        window.location.href = "login.html";
     } else {
         // Exibe alerta de erro se os dados forem inválidos
         alert("Erro: Preencha todos os campos corretamente antes de cadastrar.");
