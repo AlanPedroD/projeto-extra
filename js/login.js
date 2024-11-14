@@ -1,4 +1,3 @@
-
 // Seleciona os campos do formulário de login
 const inputEmail = document.querySelector('#email');
 const inputSenha = document.querySelector('#senha');
@@ -16,6 +15,7 @@ function showHelperText(helper, message) {
 
 // Função para ocultar mensagem de ajuda
 function hideHelperText(helper) {
+    helper.innerText = ''; // Limpa o texto
     helper.classList.remove('visible');
 }
 
@@ -30,9 +30,18 @@ loginButton.addEventListener('click', function(event) {
     // Verifica se o email e senha digitados correspondem aos dados salvos
     if (inputEmail.value === savedEmail && inputSenha.value === savedSenha) {
         alert("Login realizado com sucesso!");
+
+        // Limpa as mensagens de erro e estilos
+        hideHelperText(emailHelper);
+        hideHelperText(senhaHelper);
+        inputEmail.classList.remove('error');
+        inputSenha.classList.remove('error');
+
         // Redireciona para outra página, se necessário
         // window.location.href = "pagina-principal.html";
+
     } else {
+        // Exibe mensagem de erro se o email não estiver correto
         if (inputEmail.value !== savedEmail) {
             showHelperText(emailHelper, "Email não cadastrado");
             inputEmail.classList.add('error');
@@ -41,6 +50,7 @@ loginButton.addEventListener('click', function(event) {
             inputEmail.classList.remove('error');
         }
 
+        // Exibe mensagem de erro se a senha não estiver correta
         if (inputSenha.value !== savedSenha) {
             showHelperText(senhaHelper, "Senha incorreta");
             inputSenha.classList.add('error');

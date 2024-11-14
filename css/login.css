@@ -41,6 +41,7 @@ body {
 }
 .box {
 	position: relative;
+	margin-bottom: 20px;
 }
 .box input {
 	padding-right: 30px;
@@ -52,7 +53,6 @@ body {
 	right: 30px;
 	color: #fff;
 }
-
 
 .box label {
     position: absolute;
@@ -67,8 +67,6 @@ body {
 	display: none;
 }
 
-
-
 .area input, button {
 	border: none;
 	border: 1px solid #bababa;
@@ -78,10 +76,19 @@ body {
 	color: #ffffff;
 	font-size: 16px;
 	width: 100%;
-	margin-bottom: 20px;
+	/* margin-bottom: 20px; */
 	padding: 15px;
 	border-radius: 50px;
 }
+
+.area input{
+	margin-bottom: 2px;
+}
+
+.helper-text{
+	color: red;
+}
+
 .area .options {
 	display: flex;
 	justify-content: space-between;
