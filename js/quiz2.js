@@ -33,8 +33,8 @@ let ranking = [];
 // Randomizar perguntas
 quizData.sort(() => Math.random() - 0.5);
 
-const correctSound = new Audio('/audio/fire.mp3');
-const wrongSound = new Audio('/audio/buzzer.mp3');
+const correctSound = new Audio('audio/fire.mp3');
+const wrongSound = new Audio('audio/buzzer.mp3');
 
 function loadQuestion() {
   const questionElement = document.getElementById("question");
@@ -144,7 +144,7 @@ function restartQuiz() {
 }
 
 function goToHomePage() {
-  window.location.href = "index.html"; // Troque para o URL da página inicial
+  window.location.href = "pages/pag-quizzes.html"; // Troque para o URL da página inicial
 }
 
 document.addEventListener("DOMContentLoaded", () => {
