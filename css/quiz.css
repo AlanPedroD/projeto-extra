@@ -54,7 +54,7 @@ h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.5em;
 }
 
 #choices button:hover {
@@ -226,7 +226,7 @@ h3 {
     margin-right: 40%;
     display: block;
     margin: 10px 0;
-    padding: 8px;
+    padding: 10px;
     /* Reduz o padding para diminuir o tamanho */
     background-color: #4A5C6A;
     color: white;
@@ -235,7 +235,7 @@ h3 {
     /* Cursor padrão, já que não é clicável */
     /* Removido o efeito neon */
     box-shadow: none;
-    font-size: 0.9em;
+    font-size: 1.2em;
     /* Diminui o tamanho da fonte */
 }
 
