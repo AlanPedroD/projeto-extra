@@ -125,3 +125,47 @@ botaoCadastro.addEventListener('click', function(event) {
     event.preventDefault(); // Evita o envio do formulário
     salvarCadastro(); // Chama a função para salvar, exibir o alerta e limpar o formulário
 });
+// Função para salvar usuários no localStorage
+function salvarCadastro() {
+    if (inputNome.classList.contains('correct') &&
+        inputEmail.classList.contains('correct') &&
+        inputSenha.classList.contains('correct')) {
+        
+        // Recupera os usuários existentes no localStorage
+        let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+        
+        // Adiciona o novo usuário
+        usuarios.push({
+            nome: inputNome.value,
+            email: inputEmail.value,
+            senha: inputSenha.value
+        });
+        
+        // Salva novamente no localStorage
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        
+        alert("Cadastro realizado com sucesso!");
+        limparFormulario();
+        window.location.href = "login.html";
+    } else {
+        alert("Erro: Preencha todos os campos corretamente antes de cadastrar.");
+    }
+}
+
+// Função de login adaptada para verificar múltiplos usuários
+loginButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    
+    // Recupera a lista de usuários do localStorage
+    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    
+    // Verifica se há um usuário com o email e senha fornecidos
+    let usuarioValido = usuarios.find(user => user.email === inputEmail.value && user.senha === inputSenha.value);
+    
+    if (usuarioValido) {
+        alert(`Bem-vindo, ${usuarioValido.nome}!`);
+        window.location.href = "quizzes.html";
+    } else {
+        alert("Email ou senha incorretos. Tente novamente.");
+    }
+});

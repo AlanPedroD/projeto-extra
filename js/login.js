@@ -38,7 +38,7 @@ loginButton.addEventListener('click', function(event) {
         inputSenha.classList.remove('error');
 
         // Redireciona para outra página, se necessário
-        window.location.href = "quizzes.html";
+        window.location.href = "../index.html";
 
     } else {
         // Exibe mensagem de erro se o email não estiver correto
