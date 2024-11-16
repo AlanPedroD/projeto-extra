@@ -1,6 +1,4 @@
 body{
-    /* background: url(../image/galaxia-noturna.jpg); */
-    /* background: url(../image/galaxia-noturna-paint.jpg); */
     background: url(../image/imagem-gif-planeta.gif);
     display: flex;
     flex-direction: column;
@@ -52,17 +50,15 @@ body{
     display: block;
     transition: transform 0.5s;
 }
-  
+
 .overlay {
     width: 100%;
-    height: 0;
-    /* background: linear-gradient(transparent, #7f8194 100%); */
+    height: 140%;
     background: linear-gradient(transparent, #9ca3e3 100%);
     border-radius: 10px;
     position: absolute;
     left: 0;
     bottom: 0;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,9 +66,21 @@ body{
     padding: 0 40px;
     text-align: center;
     font-size: 14px;
-    transition: height 0.5s;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.5s, opacity 0.5s;
 }
-  
+
+.box:hover img {
+    transform: scale(1.1);
+}
+
+.box:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+    cursor: pointer;
+}
+
 .overlay h3 {
     font-weight: 600;
     margin-bottom: 5px;
@@ -95,14 +103,6 @@ body{
     padding: 10px 40px;
 }
   
-.box:hover img {
-    transform: scale(1.1);
-}
-  
-.box:hover .overlay {
-    height: 145%;
-    cursor: pointer;
-}
 /*fim-cards*/
 
 @media(max-width: 768px){
