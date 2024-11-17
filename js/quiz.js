@@ -70,6 +70,8 @@ function checkAnswer(choice) {
     }
 
     document.getElementById("next-btn").style.display = "block";
+
+    setTimeout(nextQuestion, 1000);
 }
 
 function nextQuestion() {
