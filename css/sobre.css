@@ -1,6 +1,7 @@
 body{
   background: url(../image/galaxia-noturna.jpg);
   background-size: cover;
+  font-family: 'Jura', sans-serif;
 }
 /*sobre nos */
 .about{

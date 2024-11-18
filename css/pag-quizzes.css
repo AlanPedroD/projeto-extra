@@ -5,6 +5,7 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Jura', sans-serif;
 }
 
 
@@ -85,7 +86,7 @@ body{
     font-weight: 600;
     margin-bottom: 5px;
     margin-top: 80%;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Jura', sans-serif;
     font-size: 26px;
     letter-spacing: 1.5px;
     color: #2BDEFD;

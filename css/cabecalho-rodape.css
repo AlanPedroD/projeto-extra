@@ -4,8 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    /* font-family: "Playwrite GB S", cursive; */
-    /* font-family: "Jura", sans-serif; */
+    font-family: "Jura", sans-serif;
 }
 
 /*! Cabeçalho */
@@ -59,7 +58,6 @@
     transition: background-color 0.3s ease;
     border: 1px solid transparent;
     font-weight: 500;
-    font-family: "Playwrite GB S", cursive;
     transition: 0.3s ease;
 }
 .nav ul.light-mode a{
