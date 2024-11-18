@@ -48,6 +48,7 @@
 }
 .nav ul.light-mode{
     background-color: #FF9D5C;
+    border: 1px solid black;
 }
 
 .nav ul li a {
