@@ -100,7 +100,7 @@ function salvarCadastro() {
         limparFormulario();
         
         // Redireciona para a página de login
-        window.location.href = "login.html";
+        window.location.href = "pag-quizzes.html";
     } else {
         // Exibe alerta de erro se os dados forem inválidos
         alert("Erro: Preencha todos os campos corretamente antes de cadastrar.");
@@ -146,7 +146,7 @@ function salvarCadastro() {
         
         alert("Cadastro realizado com sucesso!");
         limparFormulario();
-        window.location.href = "login.html";
+        window.location.href = "pag-quizzes.html";
     } else {
         alert("Erro: Preencha todos os campos corretamente antes de cadastrar.");
     }
@@ -164,7 +164,7 @@ loginButton.addEventListener('click', function(event) {
     
     if (usuarioValido) {
         alert(`Bem-vindo, ${usuarioValido.nome}!`);
-        window.location.href = "quizzes.html";
+        window.location.href = "pag-quizzes.html";
     } else {
         alert("Email ou senha incorretos. Tente novamente.");
     }
