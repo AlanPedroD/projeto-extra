@@ -11,7 +11,7 @@ const quizData = [
   },
   {
       question: "Qual período da história do Brasil ficou conhecido como República Velha?",
-      choices: ["1889 a 1930", "930 a 1945", "1945 a 1964", "1964 a 1985"],
+      choices: ["1889 a 1930", "1930 a 1945", "1945 a 1964", "1964 a 1985"],
       correct: "1889 a 1930"
   },
   {
@@ -142,7 +142,7 @@ function loadRankingHomePage() {
 
 function restartQuiz() {
     // Se estiver em outra página, redireciona para quiz.html
-    window.location.href = "quizzes.html";  
+    window.location.href = "quiz9.html";  
 }
 
 function goToHomePage() {
