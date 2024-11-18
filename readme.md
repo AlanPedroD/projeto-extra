@@ -1,8 +1,9 @@
-## Projeto Integrador (Sprint 03) Proz educação
+## Projeto Integrador (Sprint 04) Proz educação
 <h3> Tecnologias utilizadas :</h3>
 <ul>
     <li>HTML</li>
     <li>CSS</li>
+    <li>JS</li>
 </ul>
 <h3>Equipe:</h3>
 <h5>Leonardo Vinicius</h5>
