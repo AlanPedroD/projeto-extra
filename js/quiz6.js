@@ -142,7 +142,7 @@ function loadRankingHomePage() {
 
 function restartQuiz() {
     // Se estiver em outra página, redireciona para quiz.html
-    window.location.href = "quizzes.html";  
+    window.location.href = "quiz6.html";  
 }
 
 function goToHomePage() {
