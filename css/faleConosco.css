@@ -42,6 +42,7 @@ body {
     border-radius: 5px;
     background-color: #01060e;
     color: #d6dcde;
+    font-size: 14px;
   }
 
   .form-container input:focus, 
