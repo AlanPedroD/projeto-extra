@@ -1,62 +1,53 @@
-// Seleciona os campos do formulário de login
-const inputEmail = document.querySelector('#email');
-const inputSenha = document.querySelector('#senha');
-const emailHelper = document.querySelector('#email-helper');
-const senhaHelper = document.querySelector('#senha-helper');
+document.addEventListener('DOMContentLoaded', function () {
+    let inputEmail = document.getElementById('email-login'); // ID correto
+    let inputSenha = document.getElementById('senha-login'); // ID correto
+    let formularioLogin = document.getElementById('form-login');
 
-// Botão de login
-const loginButton = document.querySelector('.button-login');
+    console.log(inputEmail);
+    console.log(inputSenha);
+    // Função para validar o login
+    function validarLogin(email, senha) {
+        let erros = [];
 
-// Função para mostrar mensagem de ajuda
-function showHelperText(helper, message) {
-    helper.innerText = message;
-    helper.classList.add('visible');
-}
-
-// Função para ocultar mensagem de ajuda
-function hideHelperText(helper) {
-    helper.innerText = ''; // Limpa o texto
-    helper.classList.remove('visible');
-}
-
-// Evento de clique no botão de login
-loginButton.addEventListener('click', function(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
-
-    // Obtém os dados salvos no localStorage
-    const savedEmail = localStorage.getItem('email');
-    const savedSenha = localStorage.getItem('senha');
-
-    // Verifica se o email e senha digitados correspondem aos dados salvos
-    if (inputEmail.value === savedEmail && inputSenha.value === savedSenha) {
-        alert("Login realizado com sucesso!");
-
-        // Limpa as mensagens de erro e estilos
-        hideHelperText(emailHelper);
-        hideHelperText(senhaHelper);
-        inputEmail.classList.remove('error');
-        inputSenha.classList.remove('error');
-
-        // Redireciona para outra página, se necessário
-        window.location.href = "../index.html";
-
-    } else {
-        // Exibe mensagem de erro se o email não estiver correto
-        if (inputEmail.value !== savedEmail) {
-            showHelperText(emailHelper, "Email não cadastrado");
-            inputEmail.classList.add('error');
-        } else {
-            hideHelperText(emailHelper);
-            inputEmail.classList.remove('error');
+        // Verificar se o e-mail foi preenchido
+        if (!email) {
+            erros.push('O e-mail é obrigatório.');
         }
 
-        // Exibe mensagem de erro se a senha não estiver correta
-        if (inputSenha.value !== savedSenha) {
-            showHelperText(senhaHelper, "Senha incorreta");
-            inputSenha.classList.add('error');
-        } else {
-            hideHelperText(senhaHelper);
-            inputSenha.classList.remove('error');
+        // Verificar se a senha foi preenchida
+        if (!senha) {
+            erros.push('A senha é obrigatória.');
         }
+
+        return erros;
     }
+
+    // Função para verificar se o usuário está cadastrado
+    function verificarCadastro(email, senha) {
+        let cadastros = JSON.parse(localStorage.getItem('cadastros')) || [];
+        let usuario = cadastros.find(cadastro => cadastro.email === email && cadastro.senha === senha);
+        return usuario;
+    }
+
+    formularioLogin.addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita o envio padrão do formulário
+
+        let email = inputEmail.value;
+        let senha = inputSenha.value;
+
+        let erros = validarLogin(email, senha);
+
+        if (erros.length > 0) {
+            alert('Erro(s):\n' + erros.join('\n'));
+        } else {
+            let usuario = verificarCadastro(email, senha);
+
+            if (usuario) {
+                alert('Login realizado com sucesso!');
+                window.location.href = "pag-quizzes.html"; // Redireciona para a página de jogos
+            } else {
+                alert('E-mail ou senha inválidos!');
+            }
+        }
+    });
 });
