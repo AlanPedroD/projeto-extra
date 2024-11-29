@@ -5,6 +5,15 @@ body {
     margin: 0;
     padding: 0;
     color: #d6dcde;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  html{
+    height: 100%;
+  }
+  main{
+    flex: 1;
   }
 
   /* Container do formulário */
