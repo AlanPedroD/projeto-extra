@@ -33,7 +33,11 @@ body {
     position: relative;
 }
 .banner.light-mode{
-    background-image: url(../image/banner-light-1920.png);
+    /* background-image: url(../image/banner-light-1920.png); */
+    background-image: url(../image/banner-light-03.gif);
+}
+.banner.light-mode h1{
+    color: #021017;
 }
 
 .seta {
