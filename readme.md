@@ -1,4 +1,4 @@
-## Projeto Integrador (Sprint 04) Proz educação
+## Sprint 05 Proz Final (Integrador)
 <h3> Tecnologias utilizadas :</h3>
 <ul>
     <li>HTML</li>
