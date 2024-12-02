@@ -4,7 +4,8 @@ const elementosParaAlterar = [
     document.querySelector('body'),
     document.querySelector('.banner'),
     document.querySelector('.button'),
-    document.querySelector('header ul')
+    document.querySelector('header ul'),
+    document.querySelector('div.seta')
 ];
 const logo = document.querySelector('.logo img');
 
