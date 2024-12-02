@@ -213,7 +213,6 @@ footer{
 }
 
 
-
 @media (max-width: 700px){
     .footerNav ul{
         flex-direction: column;
