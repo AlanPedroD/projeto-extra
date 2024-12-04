@@ -14,8 +14,6 @@
     align-items: center;
     padding: 5px;
     background-color: #070d12;
-    /* background-color: #1A1A40;
-    background-color: #F4F4F4; */
 }
 .header.light-mode{
     background-color: #00d1b2;
@@ -226,6 +224,10 @@ footer{
 
 
 @media(max-width: 426px){
+    .header{
+        margin-bottom: 10px;
+        padding: 20px 5px;
+    }
     .nav ul.light-mode{
         border: none;
         background-color: #FF9831;

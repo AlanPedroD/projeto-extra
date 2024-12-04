@@ -187,3 +187,17 @@ body{
     flex-direction: column;
   }
 }
+
+@media(max-width: 426px){
+  .container-m h1{
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .cen{
+    font-size: 16px;
+    max-width: 90%;
+  }
+  .banner-image{
+    height: 280px;
+  }
+}
